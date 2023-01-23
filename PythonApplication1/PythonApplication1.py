@@ -1,6 +1,4 @@
-from asyncio import sleep
 import random
-from turtle import delay
 matris = 10
 sayi = int()
 x = int()
@@ -9,11 +7,10 @@ kap = list()
 
 class Pire:
    
-    def __init__(self):#oluþturma
+    def __init__(self):#oluÃ¾turma
 
         self.kordX = random.randint(0, matris-1)
         self.kordY = random.randint(0, matris-1)
-    
     
     def move(self):#hareket metodu
         drec = random.randint(0, 1)
@@ -39,16 +36,14 @@ class Pire:
                 self.kordY -=1
             elif 0 == self.kordY :
                 self.kordY +=1
-            
 
-
-for i in range(40):# x pire oluþtur
+for i in range(40):# x pire oluÃ¾tur
     kap.append(Pire())
 
 for l in range(10):
 
     for y in range(matris):
-        for x in range(matris):#matris for döngüleri
+        for x in range(matris):#matris for dÃ¶ngÃ¼leri
             for z in kap:#pire konum bulma
                 if x == z.kordX and y == z.kordY:
                     sayi +=1
@@ -63,5 +58,4 @@ for l in range(10):
     input()
     #print()
     
-
 print("son")
